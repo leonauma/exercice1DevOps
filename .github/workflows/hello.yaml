@@ -1,4 +1,12 @@
-
+name: Hello World
 
 on:
-  run echo "Hello, world!"
+  workflow_dispatch:   # lancement manuel depuis GitHub
+  push:                # et à chaque push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher hello world
+        run: echo "Hello World"
