@@ -3,10 +3,10 @@ default:
 
 git:
     rm -rf .git
-    git init 
+    rm -f README.md
+    git init
     git remote add origin git@github.com:leonauma/exercice1DevOps.git
     git pull origin test1
-
 clean:
     if [ -e "tmp.txt" ] ;then rm -f tmp.txt;fi
     
